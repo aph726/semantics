@@ -1,0 +1,180 @@
+[[[EAT(s,f)] [&] (BARK-AT(f,s)] → BECOME-MAD-AT(s,f))]
+
+[[EAT(s,f)] [&] [[BARK-AT(f,s)] [→] [BECOME-MAD-AT(s,f)]]]
+
+
+SAY(a,BE(c,TRUST(j,n)))
+
+(p & q) → r ∨ s
+((p & q) → r) ∨ s
+(p & q) → (r ∨ s)
+
+p & (q → r) ∨ s
+(p & (q → r)) ∨ s
+p & ((q → r) ∨ s)
+
+∀x(SPANIEL(x) → ((HEAVIER-THAN(Chairman Miau,x) & MEANER-THAN(Chairman Miau,x)))
+
+∀x(PERSON(x) → LEAVE(x,the room)) → EMPTY(the room)
+∀x(ON(x,Jones’plate)→EAT(j,x)) & ∃y(BUN(y)&EAT(h,y))
+
+∀x(CHILD(x) → ∃y(BISCUIT(y) XOR BATMAN-COMIC(y) & GIVE(c,x,y)))
+
+∃x(BISCUIT(x) XOR BATMAN-COMIC(x) & ∀y(CHILD(y) → GIVE(c,y,x)))
+ 
+ 
+∃x(PERSON(x)&~LIKE(x,semantics))
+∼∀x(PERSON(x) → LIKE(x,semantics))
+ 
+ 
+∃x(HIGHSCHOOL(x) & KID(x) & ∀y(PRIZE(y) → WIN(x,y)))
+∀x(PRIZE(x) → ∃y(HIGHSCHOOL(y) & KID(y) & WIN(y, x)))
+
+
+(ASK(m,BUY(b,some cake)) & BUY(b,some cake)) → EAT(b,some cake) ∨ GET-MAD-AT(m,b)
+((ASK(m,BUY(b,some cake)) & BUY(b,some cake)) → EAT(b,some cake)) ∨ GET-MAD-AT(m,b)
+(ASK(m,BUY(b,some cake)) & BUY(b,some cake)) → (EAT(b,some cake) ∨ GET-MAD-AT(m,b))
+
+∀x(WALL(x) & IN(x,the kitchen) → ∃y(PERSON(y) & SCRIBBLE(y, x)))
+
+∃x(PERSON(x) & ∀y(WALL(y) & IN(y,the kitchen) → SCRIBBLE(x,y)))
+
+∃x(MILKSHAKE(x) & ∀y(CHEERLEADER(y) → SHARE(y,x,s)))
+
+∀x(CHEERLEADER(x) → ∃y(MILKSHAKE(y) SHARE(x,y,s))
+
+∃x(HORSE(x)&~JUMP(x,the fence))
+∼∀x(HORSE(x) → JUMP(x,the fence))
+
+∀x(DOG(x) → BARK(x))
+
+~∃x(CROW(x) & ∼LOVE(b,x))
+
+=
+(p ∧ (¬q)) → r
+[[.[.[p] [∧] [.[¬][q]]]] [→] [r]]
+p ∧ ((¬q) → r)
+[[p] [∧] [[[¬][q]] [→] [r]]]
+p ∧ ¬(q → r)
+[[p] [∧] [[¬][[q] [→] [r]]]]
+=
+
+(HABITABLE(Mars) ∧ ~BEMOAN(my kids, their vegetables)) → TAKE(I, my kids, Olympus Mons)
+[[[HABITABLE(Mars)] [∧] [.[~BEMOAN(my kids, their vegetables)]]] [→] [.[TAKE(I , my kids, Olympus Mons)]]]
+
+[(HABITABLE(Mars) ∧ ~BEMOAN(my kids, their vegetables)) → TAKE(I, my kids, Olympus Mons)]
+[[[HABITABLE(Mars)] [∧] [[¬][BEMOAN(my kids, their vegetables)]]] [→] [TAKE(I, my kids, Olympus Mons)]]
+
+(SPANIEL(x) → ((HEAVIER-THAN(m,x) & MEANER-THAN(m,x)))
+∀x(PERSON(x) → LEAVE(x,the room) → EMPTY(the room))
+
+
+=
+
+∃x(HIGHSCHOOL(x) & KID(x) & ∀y(PRIZE(y) → WIN(x,y)))
+
+[[∃x][[[HIGHSCHOOL(x)] [&] [KID(x)]] [&] [[[∀y] PRIZE(y)] [→] WIN(x,y)]]]
+[[∃x][[[HIGHSCHOOL(x)] [&] [KID(x)]] [&] [[∀y] [PRIZE(y) → WIN(x,y)]]]]]
+[[∃x][[[HIGHSCHOOL(x)] [&] [KID(x)]] [&] [[∀y] [[PRIZE(y)] [→] WIN(x,y)]]]]
+
+∀x(PRIZE(x) → ∃y(HIGHSCHOOL(y) & KID(y) & WIN(y, x)))
+[[∀x][PRIZE(x) → ∃y(HIGHSCHOOL(y) & KID(y) & WIN(y, x))]]
+
+[[∀x] [[PRIZE(x)] [→] [[∃y][[HIGHSCHOOL(y)] [&] [KID(y)] [&] WIN(y, x)]]]]
+
+=
+
+∀x(WALL(x) & IN(x,the kitchen) → ∃y(PERSON(y) & SCRIBBLE(y, x)))
+[[∀x][WALL(x)] [&] [IN(x,the kitchen)] [→] [∃y] [PERSON(y)] [&] SCRIBBLE(y, x)]
+[[∀x][[WALL(x)] [&] IN(x,the kitchen) [→] [[∃y] [[PERSON(y)] [&] SCRIBBLE(y, x)]]]]
+
+∃x(PERSON(x) & ∀y(WALL(y) & IN(y,the kitchen) → SCRIBBLE(x,y)))
+[[∃x] [[PERSON(x)] [&] [[∀y] [[WALL(y)] [&] IN(y,the kitchen) [→] SCRIBBLE(x,y)]]]]
+[[∃x] [[PERSON(x)] [&] [[∀y] [[[WALL(y)] [&] IN(y,the kitchen)] [→] SCRIBBLE(x,y)]]]]
+
+=
+
+∃x(MILKSHAKE(x) & ∀y(CHEERLEADER(y) → SHARE-WITH(y,x,s)))
+[[∃x] [[MILKSHAKE(x)] [&] [[∀y][[CHEERLEADER(y)] [→] SHARE-WITH(y,x,s)]]]]
+
+∀x(CHEERLEADER(x) → ∃y(MILKSHAKE(y) & SHARE-WITH(x,y,s)))
+[[∀x] [CHEERLEADER(x) → [[∃y] [[MILKSHAKE(y)] [&] [SHARE-WITH(x,y,s)]]]]]
+
+=
+
+∃x(HORSE(x)&~JUMP(x,the fence))
+
+[[∃x] [[HORSE(x)][&][[~]JUMP(x,the fence)]]]
+
+∼∀x(HORSE(x) → JUMP(x,the fence))
+[[∼][[∀x] [[HORSE(x)] [→] JUMP(x,the fence)]]]
+
+
+
+Consider the following sentence: "Some dog ate my homework and some dog did not eat my homework." Why is this sentence semantically sound? Because the non-referential NPs of "some dog" here denotes any member of the set of dogs in the world either in the subset of HW-eating dogs or it's opposite, NOT a specific individual canine that has to be in one subset or the other (as the r-expression Fido does). Since the sentence is understood as describing the actions of two different dogs, the negation does not result in contradiction.
+
+
+
+~p & q 
+~(p & q) 
+[[~][.[p] [&] [q]]] 
+(~p) & q 
+[[.[~][p]] [&] [q]]
+
+Part 1
+A: Few dogs ate homework on Sunday night. 
+
+Denotation of the predicate "ate homework on Sunday night": {x|x ate homework on Sunday night}
+
+Subset-to-superset inference that can be drawn from A:
+B: Few dogs ate homework on Sunday. 
+
+Denotation of the predicate "ate homework on Sunday.": {y|y ate homework on Sunday.}
+
+But is it a subset-to-superset inference since the canines eating homework on Sunday night is could be a subset of eating homework on Sunday in general?
+
+Part 2
+
+No, because it both sentences aren't required to refer to the same minority of dogs, it's merely an implicature. That's why I used a different variable to write out the denotation of sentence B; while the minority of dogs that ate homework on Sunday night are a subset of the few dogs that ate homework anytime Sunday, it can also be a PROPER subset. Meaning, Sentence B can refer to what little dogs ate homework on Sunday that just did so in the morning, retaining felicity.  
+
+A way to visualize this is with a scenario like "80% of dogs ate homework on Friday, 15% on Sunday, and 5% only during Sunday evening." Sentence A and B can be true for referring to only the last two populations of dogs, with that 10% of Sunday-general homework eaters being the referents that prevent "few dogs" in sentence B being parsed the same way "Fido" would.
+
+
+
+
+
+
+
+
+
+
+
+Part 1
+A: Few dogs eat homework exactly 10 minutes before class. 
+
+Denotation of the predicate "Eat homework 10 minutes before class": {x|x eats homework exactly 10 minutes before class }
+
+Subset-to-superset inference that can be drawn from A:
+B: Few dogs eat homework before class. 
+
+Denotation of the predicate "Eat homework before class": {y|y eats homework before class}
+
+But is it a subset-to-superset inference since eating homework exactly 10 minutes before class is could be a subset of eating homework before class in general?
+
+No, because it both sentences aren't required to refer to the same minority of dogs. 
+
+Part 2
+"Few dogs eat homework exactly 10 minutes before class and few dogs don't eat homework before class." Doesn't produce a contradiction. A way to visualize this is with a sentence like "80% of dogs eat homework exactly 5 minutes before class, 15% exactly 10 minutes before, and 5% 
+
+
+HOWEVER 
+
+x in these denotations doesn't refer to an individual as it did for the r-expression Fido. It refers to a minority in the set of all dogs by its 
+
+The "few dogs" of {x|x eats homework 10 minutes before class} doesn't have to be a subset of {x|x eats homework before class}.
+
+Few dogs eat home
+
+
+
+
