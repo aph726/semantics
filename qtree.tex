@@ -1,0 +1,107 @@
+IN(c,t)
+
+\Tree [.TP\\{$\lambda z[IN(z,t)](c)$}\\IN(c,t)\\t [.DP\\{$\lambda Q[\iota x(Q(x))(\lambda x'[CAT(x')])]$}\\{$\iota x'(\lambda x'[CAT(x')](x))$}\\{$\iota x(CAT(x))$}\\c\\e [.D the\\{$\lambda Q[\iota (Q(x))]$}\\{$\langle\langle$e,t$\rangle$,e$\rangle$} ] [.NP cat\\{$\lambda x[CAT(x)]$}\\{$\langle$e,t$\rangle$} ] ] [.T'\\{$\lambda P[P](\lambda z[IN(z,t)])$}\\{$\lambda z[IN(z,t)]$}\\{$\langle$e,t$\rangle$} [.T ø\\{$\lambda P[P]$}\\{$\langle\langle$e,t$\rangle$,$\langle$e,t$\rangle\rangle$}  ] [.VP\\{$\lambda P[\lambda z[P(z)]](\lambda y[IN(y,t)])$}\\{$\lambda y[\lambda y[IN(y,t)](z)]$}\\{$\lambda z[IN(z,t)]$}\\{$\langle$e,t$\rangle$} [.V is\\{$\lambda P[\lambda z[P(z)]]$}\\{$\langle\langle$e,t$\rangle$,$\langle$e,t$\rangle\rangle$} ] [.PP\\{$\lambda x[\lambda y[IN(y,x)]](t)$}\\{$\lambda y[IN(y,t)]$}\\{$\langle$e,t$\rangle$} [.P in\\{$\lambda x[\lambda y[IN(y,x)]]$}\\{$\langle$e,$\langle$e,t$\rangle\rangle$} ] [.DP\\{$\lambda R[\iota y(R(y))](\lambda y'[TREE(y')])$}\\{$\iota y'(\lambda y'[TREE(y')](y))$}\\{$\iota y(TREE(y))$}\\t\\e [.D the\\{$\lambda R[\iota y(R(y))]$}\\{$\langle\langle$e,t$\rangle$,e$\rangle$} ] [.NP tree\\{$\lambda y[TREE(y)]$}\\{$\langle$e,t$\rangle$} ] ] ] ] ] ]
+
+
+\Tree [.TP\\IN(c,t)\\t [.DP\\{$\lambda Q[\iota x(Q(x))(\lambda x'[CAT(x')])]$}\\c\\e [.D the\\{$\lambda Q[\iota (Q(x))]$}\\{$\langle\langle$e,t$\rangle$,e$\rangle$} ] [.NP cat\\{$\lambda x[CAT(x)]$}\\{$\langle$e,t$\rangle$} ] ] [.T'\\{$\langle$e,t$\rangle$} [.T ø\\{$\langle\langle$e,t$\rangle$,$\langle$e,t$\rangle\rangle$}  ] [.VP\\{$\langle$e,t$\rangle$} [.V is\\{$\langle$e,$\langle$e,t$\rangle\rangle$} ] [.PP\\{$\langle$e,t$\rangle$} [.P in\\{$\langle$e,$\langle$e,t$\rangle\rangle$} ] [.DP\\t [.D the\\{$\lambda Q[\iota (Q(x))]$} ] [.NP tree ] ] ] ] ] ]
+
+
+\Tree [.TP\\t [.DP\\c [.D the ] [.NP cat ] ] [.T' [.T ø ] [.VP [.V is ] [.PP [.P in ] [.DP\\t [.D the ] [.NP tree ] ] ] ] ] ]
+
+
+\Tree [.TP [.DP [.D the ] [.NP cat ] ] [.T' [.T ø ] [.VP [.V is ] [.PP [.P in ] [.DP [.D the ] [.NP tree ] ] ] ] ] ]
+
+%LAMBDA REDUCT
+\\{$\lambda x[\lambda y[IN(y,x)]](t)$}
+\\{$\lambda y[IN(y,t)]$}
+
+\\{$\lambda P[\lambda z[P(z)]](\lambda y[IN(y,t)])$}
+\\{$\lambda y[\lambda y[IN(y,t)](z)]$}
+\\{$\lambda z[IN(z,t)]$}
+
+\\{$\lambda P[P](\lambda z[IN(z,t)])$}
+
+\\{$\lambda P[P](\lambda z[IN(z,t)])$}
+
+\\{$\lambda z[IN(z,t)](c)$}
+
+
+%IOTA REDUCT
+\\{$\lambda Q[\iota x(Q(x))(\lambda x'[CAT(x')])]$}
+\\{$\iota x'(\lambda x'[CAT(x')](x))$}
+\\{$\iota x(CAT(x))$}
+
+\\{$\lambda R[\iota y(R(y))(\lambda y'[TREE(y')])]$}
+\\{$\iota y'(\lambda y'[TREE(y')](y))$}
+\\{$\iota y(TREE(y))$}
+
+\\{$\lambda R[\iota y(R(y))(\lambda y'[TREE(y')])]$}\\{$\iota y'(\lambda y'[TREE(y')](y))$}\\{$\iota y(TREE(y))$}
+
+%LAMBDAS
+
+\\{$\lambda P[\lambda z[P(z)]]$}
+\\{$\lambda y'[TREE(y')]$}
+\\{$\lambda y[CHASE(y,g)](f)$}
+
+\\{$\lambda x[\lambda y[CHASE(y,x)]]$}
+
+
+
+\\{$\lambda z[CAT(z)]$}
+\\{$\lambda Q[\iota x(Q(x))]$}
+
+%ETETETE
+
+\\{$\langle$e,t$\rangle$} et
+\\{$\langle$e,$\langle$e,t$\rangle\rangle$}  e,et
+\\{$\langle\langle$e,t$\rangle$,e$\rangle$} et,e
+\\{$\langle\langle$e,t$\rangle$,$\langle$e,t$\rangle\rangle$} et,et
+
+
+\\CHASE(f,g)
+\\{e,e,t} 
+
+\\{$\langle$e,t$\rangle$} 
+
+\\t
+
+[.XP [.X x ] [.YP x ] ]
+
+
+
+\Tree [.TP\\{$\lambda y[CHASE(y,g)](f)$}\\CHASE(f,g)\\t [.DP Fido\\f\\e ] [.T'\\{$\langle$e,t$\rangle$} [.T -ed\\{$\lambda P[P]$}\\{$\langle\langle$e,t$\rangle$,$\langle$e,t$\rangle\rangle$} ] [.V\\{$\lambda x[\lambda y[CHASE(y,x)]](g)$}\\{$\lambda y[CHASE(y,g)]$}\\{$\langle$e,t$\rangle$} [.V chase\\{$\lambda x[\lambda y[CHASE(y,x)]]$}\\{$\langle$e,$\langle$e,t$\rangle\rangle$}  ] [.DP Garfield\\g\\e  ] ] ] ]
+
+
+
+
+\Tree [.TP\\{$\lambda y[CHASE(y,g)](f)$}\\CHASE(f,g)\\t [.DP Fido\\f\\e ] [.T'\\{$\langle$e,t$\rangle$} [.T -ed\\{$\langle\langle$e,t$\rangle$,$\langle$e,t$\rangle\rangle$} ] [.V\\{$\lambda x[\lambda y[CHASE(y,x)]](g)$}\\{$\lambda y[CHASE(y,g)]$}P\\{$\langle$e,t$\rangle$} [.V chase\\{$\langle$e,$\langle$e,t$\rangle\rangle$}  ] [.DP Garfield\\{$\langle e,t\rangle$}  ] ] ] ]
+
+\\{$\lambda P[P](\lambda y[CHASE(y,g)])} 
+\\{$\lambda y[CHASE(y,g)](f)$}
+
+
+
+.T'zcv
+[.T'
+
+\\{$\lambda P[P](\lambda y[CHASE (y, g)])$}
+
+\Tree
+    [.S\\{$\lambda y[CHASE(y,g)](f)$}\\CHASE(f,g)\\t NP\\Fido\\f\\e 
+    
+        [.VP\\{$\lambda x
+            [\lambda y[CHASE(y,x)]]
+            (g)$}\\{$\lambda y[CHASE(y,g)]$}\\{$\langle e,t\rangle$} V\\chased\\{$\lambda x[\lambda y[CHASE(y,x)]]$}\\{$\langle$e,$\langle$e,t$\rangle\rangle$} NP\\Garfield\\g\\e 
+        ] 
+    
+    ]
+    
+
+
+\Tree[.S\\{$\lambda y[CHASE(y,g)](f)$}\\CHASE(f,g)\\t ]
+    
+\Tree [.TP [.DP Fido ] [.T' [.T -ed ] [.VP [.V chase ] [.DP Garfield ] ] ] ]
+
+\Tree [.TP\\{$\lambda y[CHASE(y,g)](f)$}\\CHASE(f,g)\\t [.DP Fido\\f\\e ] [.T' [.T -ed ] [.VP [.V chase ] [.DP Garfield\\g\\e ] ] ] ]
+
+\Tree [.TP\\{$\lambda y[CHASE(y,g)](f)$}\\CHASE(f,g)\\t [.DP Fido\\f\\e ] [.T'\\{$\langle$e,t$\rangle$} [.T -ed\\{$\langle\langle$e,t$\rangle$,$\langle$e,t$\rangle\rangle$} ] [.VP\\{$\langle$e,t$\rangle$} [.V chase\\{$\langle$e,$\langle$e,t$\rangle\rangle$}  ] [.DP Garfield\\g\\e ] ] ] ]
